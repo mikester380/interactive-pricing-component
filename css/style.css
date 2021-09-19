@@ -1,0 +1,257 @@
+:root{
+  
+/*Primary*/
+--soft-cyan: hsl(174, 77%, 80%);
+--strong-cyan: hsl(174, 86%, 45%);
+--light-grayish-red: hsl(14, 92%, 95%);
+--light-red: hsl(15, 100%, 70%);
+--pale-blue: hsl(226, 100%, 87%);
+
+/*Natural*/
+--white: hsl(0, 0%, 100%);
+--very-pale-blue: hsl(230, 100%, 99%);
+--light-grayish-blue: hsl(224, 65%, 95%);
+--light-grayish-blue2: hsl(223, 50%, 87%);
+--grayish-blue: hsl(225, 20%, 60%);
+--dark-desaturated-blue: hsl(227, 35%, 25%);
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--very-pale-blue);
+  height: 100vh;
+  font-family: 'Manrope', sans-serif;
+}
+
+.header{
+  height: 28.1rem;
+  border-bottom-left-radius: 9.4rem;
+  padding-top: 6.3rem;
+  text-align: center;
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center top 20%;
+  background-size: 11.3rem;
+  background-color: var(--light-grayish-blue);
+}
+
+.heading{
+  color: var(--dark-desaturated-blue);
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.header_text{
+  font-size: 0.9rem;
+  color: var(--grayish-blue);
+}
+
+.header_text p:first-child{
+  margin-bottom: 0.6rem;
+}
+
+.card{
+  width: 90%;
+  max-width: 31.25rem;
+  margin: 0 auto;
+  border-radius: 0.31rem;
+  transform: translateY(-11.3rem);
+  background-color: var(--white);
+}
+
+.card_top{
+  padding: 1.9rem 1.6rem;
+  text-align: center;
+  position: relative;
+}
+
+.page_views{
+  margin-bottom: 3.1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--grayish-blue);
+}
+
+.slider{
+  height: 0.6rem;
+  position: relative;
+}
+
+.range{
+ -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 0.6rem;
+  position: absolute;
+  top: 0;
+  border-radius: 0.6rem;
+  background: var(--light-grayish-blue);
+}
+
+.range::-webkit-slider-thumb{
+ -webkit-appearance: none;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--strong-cyan);
+}
+
+.progress{
+  width: 0%;
+  height: 0.6rem;
+  border-radius: 0.6rem;
+  position: absolute;
+  top: 0;
+  background: var(--soft-cyan);
+}
+
+.price{
+  margin-top: 3.75rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice{
+  display: block;
+  margin-left: 0.9rem;
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+
+.toggle_billing{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toggle{
+  width: 3.7rem;
+  height: 1.9rem;
+  background: var(--light-grayish-blue2);
+  border-radius: 6.25rem;
+  margin: 0 0.9rem;
+  position: relative;
+}
+
+.toggle:hover{
+  background-color: var(--soft-cyan);
+}
+
+.circle{
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.3rem;
+  background: var(--white);
+  transition: left .3s;
+}
+
+.title{
+  font-size: 0.7rem;
+  color: var(--grayish-blue);
+}
+
+.discount{
+  background: var(--light-grayish-red);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--light-red);
+  text-align: center;
+  width: 3.1rem;
+  border-radius: 6.25rem;
+  margin-left: 0.3rem;
+}
+
+.card_bottom{
+  text-align: center;
+  padding: 1.9rem 0;
+  border-top: 2px solid var(--light-grayish-blue);
+}
+
+.features{
+  margin-bottom: 2.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.check{
+  margin-right: 0.9rem;
+}
+
+.feature:not(:last-child){
+  margin-bottom: 0.9rem;
+}
+
+.card_bottom a:link, a:visited{
+  text-decoration: none;
+  padding: 0.75rem 3rem;
+  border-radius: 6.2rem;
+  color: var(--pale-blue);
+  background: var(--dark-desaturated-blue);
+}
+
+.card_bottom a:link, a:visited:hover{
+  color: var(--white);
+}
+
+.move_toggle{
+  left: 2.1rem;
+}
+
+@media (min-width: 30rem){
+  .slider_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  
+  .slider{
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+  }
+  
+  .card_top{
+    padding: 1.9rem 2.5rem;
+  }
+  
+  .page_views, .price{
+    margin: 0;
+  }
+  
+  .card_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.9rem 2.5rem;
+  }
+  
+  .features{
+    text-align: left;
+    margin: 0;
+  }
+  
+}
